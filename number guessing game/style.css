@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* 🔹 Main Card */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    width: 300px;           /* 🔑 fixed width */
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* 🔹 Input */
+input {
+    width: 120px;           /* 🔑 input chhota */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+/* 🔹 Attempts below input */
+#attempts {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* 🔹 Buttons wrapper */
+.buttons {
+    margin-top: 15px;
+}
+
+/* 🔹 Buttons */
+button {
+    padding: 10px 14px;
+    margin: 6px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#btn {
+    background: #28a745;
+    color: white;
+}
+
+#newGameBtn {
+    background: #ffc107;
+    color: #333;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* 🔹 Result */
+#result {
+    margin-top: 18px;
+    font-size: 18px;
+}

@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* 🔹 Dark mode task text fix */
+body.dark li span {
+    color: #ffffff;
+}
+
+/* 🔹 Completed task in dark mode */
+body.dark .completed {
+    color: #aaaaaa;
+}
+
+
+body.dark {
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+}
+
+body.dark .container {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+body.dark input {
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+}
+
+body.dark li {
+    background: #2a2a2a;
+}
+
+body.dark h1 {
+    color: white;
+}
+
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔹 Card */
+.container {
+    background: #ffffff;
+    width: 340px;
+    padding: 25px 22px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 🔹 Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 18px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* 🔹 Input */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102,126,234,0.2);
+}
+
+/* 🔹 Add Button */
+#addTask {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#addTask:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+/* 🔹 Task List */
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* 🔹 Task Item */
+li {
+    background: #f6f7fb;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+li:hover {
+    background: #eef0ff;
+}
+
+/* 🔹 Task Text */
+li span {
+    cursor: pointer;
+    color: #333333;
+    flex: 1;
+}
+
+/* 🔹 Completed Task */
+.completed {
+    text-decoration: line-through;
+    color: #999999f7;
+}
+
+/* 🔹 Delete Button */
+li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+    transition: 0.2s;
+}
+
+li button:hover {
+    transform: scale(1.2);
+}

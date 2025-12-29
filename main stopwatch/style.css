@@ -1,0 +1,42 @@
+.stopwatch {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.display {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn-start {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.btn-restart {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+.btn-stop {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+}

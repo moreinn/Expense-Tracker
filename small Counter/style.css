@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+/* 🔹 Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 Page center */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🔹 Card */
+.container {
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Timer display */
+#countdown {
+    font-size: 64px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* 🔹 Buttons container */
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* 🔹 Buttons */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+/* 🔹 Individual button colors */
+#startBtn {
+    background: #28a745;
+}
+
+#pauseBtn {
+    background: #ffc107;
+    color: #333;
+}
+
+#resetBtn {
+    background: #dc3545;
+}
+
+/* 🔹 Hover effect */
+button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* 🔹 Mobile responsive */
+@media (max-width: 480px) {
+    #countdown {
+        font-size: 48px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}
