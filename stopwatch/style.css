@@ -1,11 +1,10 @@
-/* 🔹 Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 🔹 Body center */
 body {
     height: 100vh;
     display: flex;
@@ -17,13 +16,12 @@ body {
     color: #fff;
 }
 
-/* 🔹 Heading */
 h1 {
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
 
-/* 🔹 Timer display */
+
 #countdown {
     font-size: 64px;
     font-weight: bold;
@@ -35,7 +33,7 @@ h1 {
     text-align: center;
 }
 
-/* 🔹 Buttons */
+
 button {
     padding: 12px 22px;
     margin: 5px;
@@ -46,31 +44,29 @@ button {
     transition: all 0.3s ease;
 }
 
-/* 🔹 Start */
 #startBtn {
     background-color: #28a745;
     color: #fff;
 }
 
-/* 🔹 Pause */
 #pauseBtn {
     background-color: #ffc107;
     color: #333;
 }
 
-/* 🔹 Reset */
+
 #resetBtn {
     background-color: #dc3545;
     color: #fff;
 }
 
-/* 🔹 Hover effect */
+
 button:hover {
     transform: translateY(-3px);
     opacity: 0.9;
 }
 
-/* 🔹 Active click */
+
 button:active {
     transform: translateY(0);
 }
