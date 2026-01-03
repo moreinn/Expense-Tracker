@@ -1,43 +1,29 @@
-/* =========================
-   ELEMENTS
-========================= */
+
 const inputUser = document.getElementById("todoInput");
 const addTaskBtn = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
 const themeBtn = document.getElementById("themeBtn");
 
-/* =========================
-   DATA
-========================= */
 let tasks = [];
 let editIndex = null;
 
-/* =========================
-   INITIAL LOAD
-========================= */
 loadTasks();
 loadTheme();
 
-/* =========================
-   EVENTS
-========================= */
 addTaskBtn.addEventListener("click", addOrUpdateTask);
 themeBtn.addEventListener("click", toggleTheme);
 
-/* =========================
-   ADD / UPDATE TASK
-========================= */
 function addOrUpdateTask() {
     const text = inputUser.value.trim();
     if (text === "") return;
 
-    // EDIT MODE
+   
     if (editIndex !== null) {
         tasks[editIndex].text = text;
         editIndex = null;
         addTaskBtn.innerText = "Add Task";
     }
-    // ADD MODE
+   
     else {
         tasks.push({
             text: text,
@@ -50,16 +36,13 @@ function addOrUpdateTask() {
     renderTasks();
 }
 
-/* =========================
-   RENDER TASKS
-========================= */
 function renderTasks() {
     taskList.innerHTML = "";
 
     tasks.forEach((task, index) => {
         const li = document.createElement("li");
 
-        // Task text
+    
         const span = document.createElement("span");
         span.innerText = task.text;
 
@@ -67,14 +50,14 @@ function renderTasks() {
             span.classList.add("completed");
         }
 
-        // Toggle complete
+      
         span.addEventListener("click", () => {
             task.completed = !task.completed;
             saveTasks();
             renderTasks();
         });
 
-        // Edit button
+      
         const editBtn = document.createElement("button");
         editBtn.innerText = "✏️";
         editBtn.addEventListener("click", (e) => {
@@ -84,7 +67,6 @@ function renderTasks() {
             addTaskBtn.innerText = "Update Task";
         });
 
-        // Delete button
         const deleteBtn = document.createElement("button");
         deleteBtn.innerText = "❌";
         deleteBtn.addEventListener("click", (e) => {
@@ -100,18 +82,13 @@ function renderTasks() {
     });
 }
 
-/* =========================
-   DELETE TASK
-========================= */
+
 function deleteTask(index) {
     tasks.splice(index, 1);
     saveTasks();
     renderTasks();
 }
 
-/* =========================
-   LOCAL STORAGE
-========================= */
 function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
@@ -124,9 +101,7 @@ function loadTasks() {
     }
 }
 
-/* =========================
-   DARK MODE
-========================= */
+
 function toggleTheme() {
     document.body.classList.toggle("dark");
 
