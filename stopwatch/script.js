@@ -1,22 +1,22 @@
-// 🔹 Stopwatch engine
+
 let totalSeconds = 0;
 let timer = null;
 let isRunning = false;
 
-// 🔹 Elements
+
 const display = document.getElementById('countdown');
 const startBtn = document.getElementById('startBtn');
 const pauseBtn = document.getElementById('pauseBtn');
 const resetBtn = document.getElementById('resetBtn');
 
-// 🔹 Initial display
+
 updateDisplay();
 
-// 🔹 START
+
 startBtn.addEventListener('click', function () {
     if (!isRunning) {
         timer = setInterval(function () {
-            totalSeconds++;      // count UP
+            totalSeconds++;      
             updateDisplay();
         }, 1000);
         isRunning = true;
@@ -24,7 +24,7 @@ startBtn.addEventListener('click', function () {
     }
 });
 
-// 🔹 PAUSE
+
 pauseBtn.addEventListener('click', function () {
     if (isRunning) {
         clearInterval(timer);
@@ -33,7 +33,7 @@ pauseBtn.addEventListener('click', function () {
     }
 });
 
-// 🔹 RESET
+
 resetBtn.addEventListener('click', function () {
     clearInterval(timer);
     isRunning = false;
@@ -42,7 +42,7 @@ resetBtn.addEventListener('click', function () {
     
 });
 
-// 🔹 DISPLAY FUNCTION
+
 function updateDisplay() {
     let minutes = Math.floor(totalSeconds / 60);
     let seconds = totalSeconds % 60;
