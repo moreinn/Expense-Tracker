@@ -5,12 +5,11 @@
     font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-/* 🔹 Dark mode task text fix */
 body.dark li span {
     color: #ffffff;
 }
 
-/* 🔹 Completed task in dark mode */
+
 body.dark .completed {
     color: #aaaaaa;
 }
@@ -69,7 +68,6 @@ body {
     }
 }
 
-/* 🔹 Heading */
 h1 {
     text-align: center;
     margin-bottom: 18px;
@@ -77,7 +75,7 @@ h1 {
     font-size: 24px;
 }
 
-/* 🔹 Input */
+
 input {
     width: 100%;
     padding: 12px;
@@ -112,13 +110,13 @@ input:focus {
     opacity: 0.95;
 }
 
-/* 🔹 Task List */
+
 ul {
     list-style: none;
     margin-top: 20px;
 }
 
-/* 🔹 Task Item */
+
 li {
     background: #f6f7fb;
     padding: 10px 12px;
@@ -141,13 +139,13 @@ li span {
     flex: 1;
 }
 
-/* 🔹 Completed Task */
+
 .completed {
     text-decoration: line-through;
     color: #999999f7;
 }
 
-/* 🔹 Delete Button */
+
 li button {
     background: none;
     border: none;
